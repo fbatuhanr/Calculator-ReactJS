@@ -19,7 +19,7 @@ function App() {
   const oppositeSignInput = () => {
 
     if( isInputContainOperator(result) )
-      setAlertBox({ isVisible: true, content: "Please calculate the numbers on the screen before <b>applying the opposite sign!</b>" });
+      setAlertBox({ isVisible: true, content: "Please calculate the numbers on the screen before applying the opposite sign!" });
     else if( isInputContainError(result) )
       setAlertBox({ isVisible: true, content: "Please clear the screen(AC) and enter a number before applying the opposite sign!" });
     else {
@@ -28,7 +28,7 @@ function App() {
         setResult( dotToComma( commaToDot(result)*-1 ) );
       }
       catch(err){
-        setAlertBox({ isVisible: true, content: "An unknown error occurred while <b>applying the opposite sign!</b>"});
+        setAlertBox({ isVisible: true, content: "An unknown error occurred while applying the opposite sign!"});
         setResult("Error!");
       }
     }
