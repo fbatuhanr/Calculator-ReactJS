@@ -132,7 +132,8 @@ function App() {
       <div className="row justify-content-center">
 
         <div className="row col-10">
-          <InputScreen result={result}/>
+          <InputScreen result={result} col="10"/>
+          <Button val="del" type="delete" col="2" btnOnClick={removeFromInput}/>
         </div>
 
         <div className="row col-10">

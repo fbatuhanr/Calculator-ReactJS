@@ -2,9 +2,9 @@ import React from 'react'
 
 const Button = ({val, col = 3, type, btnOnClick}) => {
 
-    var buttonColor;
-
+    let buttonColor;
     switch (type) {
+        case "delete": buttonColor = "btn-danger"; break;
         case "process": buttonColor = "btn-light"; break;
         case "operation": buttonColor = "btn-warning"; break;
         default: buttonColor = "btn-secondary"; break;
@@ -12,6 +12,7 @@ const Button = ({val, col = 3, type, btnOnClick}) => {
 
     let valVisibility;
     switch (val) {
+        case "del": valVisibility = <i class="bi bi-eraser"></i>; break;
         case "-": valVisibility = <i className="bi bi-dash-lg"></i>; break;
         case "+": valVisibility = <i className="bi bi-plus-lg"></i>; break;
         case "*": valVisibility = <i className="bi bi-x-lg"></i>; break;
